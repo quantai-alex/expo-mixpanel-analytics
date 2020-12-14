@@ -60,7 +60,7 @@ export class ExpoMixpanelAnalytics {
         this.identify(this.clientId);
         this._flush();
       });
-    });
+    }).catch(_ => {});
   }
 
   register(props: any) {
